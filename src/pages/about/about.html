@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Gallery
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let photo of photosArray">
+      <img [src]="photo.photo.pic | safeUrl">
+    </button>
+  </ion-list>
+</ion-content>

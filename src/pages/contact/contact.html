@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Settings
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider color="light">Zoom</ion-item-divider>
+    <ion-item>
+      <ion-range [(ngModel)]="zoom">
+        <ion-label range-left>0%</ion-label>
+        <ion-label range-right>100%</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item-divider color="light">Flash</ion-item-divider>
+    <ion-item>
+      <ion-label>Flash</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+
+    <ion-item-divider color="light">Contrast</ion-item-divider>
+    <ion-item>
+      <ion-range [(ngModel)]="contrast">
+        <ion-label range-left>0%</ion-label>
+        <ion-label range-right>100%</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item-divider color="light">Saturation</ion-item-divider>
+    <ion-item>
+      <ion-range [(ngModel)]="saturation">
+        <ion-label range-left>0%</ion-label>
+        <ion-label range-right>100%</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

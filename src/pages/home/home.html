@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <video autoplay [srcObject]="videoSrc"></video>
+
+  <div>
+    <button primary ion-button clear (click)="settings()">Settings</button>
+  </div>
+
+  <ion-fab right bottom>
+    <button (click)="takePhoto()" ion-fab color="primary"><ion-icon name="camera"></ion-icon></button>
+  </ion-fab>
+</ion-content>
